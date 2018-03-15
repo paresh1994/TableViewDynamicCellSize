@@ -20,7 +20,7 @@ class DataModel {
 
 class ViewController: UIViewController {
 
-    static let cellIdentifier = "Cell"
+    static let cellIdentifier = "textCell"
     @IBOutlet weak var tabelView: UITableView!
     var dataModel = [DataModel]()
     
@@ -43,12 +43,11 @@ class ViewController: UIViewController {
             DataModel(title: "Functions", subtitle: "Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed. ")
         ]
         
-        
-        
         self.tabelView.delegate = self
         self.tabelView.dataSource = self
         
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -67,15 +66,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ViewController.cellIdentifier, for: indexPath) as! CustomCell
         
         // Do not forgot label number of lines as 0, default is 1
-        cell.labelTitle.numberOfLines = 0
-        cell.labelSubTitle.numberOfLines = 0
+        //cell.labelTitle.numberOfLines = 0
+       // cell.labelSubTitle.numberOfLines = 0
         
         let data = self.dataModel[indexPath.row]
-        cell.labelTitle.text = data.title
-        cell.labelSubTitle.text = data.subtitle
+        ///cell.labelTitle.text = data.title
+       // cell.labelSubTitle.text = data.subtitle
+        //cell.textView.isScrollEnabled = false
+        //cell.textView.text = data.subtitle
         return cell
     }
-    
 }
-
-

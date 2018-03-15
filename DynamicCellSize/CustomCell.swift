@@ -10,6 +10,7 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var labelTitle: UILabel!
     
     @IBOutlet weak var labelSubTitle: UILabel!
