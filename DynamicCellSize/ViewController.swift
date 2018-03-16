@@ -20,7 +20,7 @@ class DataModel {
 
 class ViewController: UIViewController {
 
-    static let cellIdentifier = "textCell"
+    static let cellIdentifier = "Cell"
     @IBOutlet weak var tabelView: UITableView!
     var dataModel = [DataModel]()
     
@@ -75,6 +75,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
